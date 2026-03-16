@@ -80,59 +80,88 @@
                 
                 <!-- Coluna Texto -->
                 <div class="space-y-8">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-wood-200 text-wood-800 text-sm font-semibold mb-2">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
-                        Atendimento em Ponta Grossa e Região
-                    </div>
-                    
                     <h1 class="font-serif text-4xl lg:text-5xl/tight font-bold text-wood-900">
-                        Móveis Planejados e Persianas sob medida para seu ambiente
+                        Transforme seu ambiente com móveis planejados sob medida
                     </h1>
                     
                     <p class="text-lg text-wood-600 font-medium">
-                        Unimos o design funcional dos móveis planejados ao conforto e elegância das persianas de alto padrão.
-                        <span class="block mt-2 text-wood-800">Projetos 100% personalizados • Orçamento gratuito</span>
+                        Projetos personalizados que unem design, funcionalidade e sofisticação.
                     </p>
+
+                    <div class="space-y-2 text-wood-800 font-medium">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            Atendimento em Ponta Grossa e região
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                            Orçamento gratuito
+                        </div>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
                         <button onclick="openModal()" class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-green-500/30 transition-all hover:-translate-y-1 w-full sm:w-auto">
                             <i data-lucide="smartphone" class="w-6 h-6"></i>
-                            Solicitar orçamento agora
+                            Solicitar orçamento
                         </button>
                     </div>
 
                     <!-- Prova Social Rápida -->
-                    <div class="flex flex-wrap items-center gap-6 pt-6 border-t border-wood-300">
-                        <div class="flex items-center gap-2">
+                    <div class="space-y-3 pt-6 border-t border-wood-300">
+                        <div class="flex items-center gap-3">
                             <div class="flex text-yellow-500">
                                 <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                            <span class="font-bold text-wood-800">Mais de 2.000 ambientes planejados entregues</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-wood-700 font-medium">
+                            <div class="flex text-yellow-500">
                                 <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             </div>
-                            <span class="font-bold text-wood-800">Clientes Satisfeitos</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-wood-700 font-medium">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-600"></i>
-                            Qualidade Línea A
+                            <span class="font-bold text-wood-800">Atendimento do projeto à instalação</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Coluna Vídeo Reels -->
+                <!-- Coluna Formulário -->
                 <div class="relative flex justify-center lg:justify-end">
-                    <!-- Elemento de Vídeo Vertical -->
-                    <div class="w-full max-w-[320px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative bg-wood-200 group">
-                        <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline preload="auto" class="w-full h-full object-cover cursor-pointer" onclick="toggleMute()">
-                            <source src="hero-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+                    <div class="w-full max-w-md bg-white rounded-2xl p-8 shadow-2xl border border-wood-100 relative z-10">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-serif font-bold text-wood-900 mb-2">Solicitar Orçamento</h3>
+                            <p class="text-wood-500 text-sm">Preencha para iniciar o atendimento direto com um especialista.</p>
+                        </div>
                         
-                        <!-- Botão de Som tipo Reels -->
-                        <button id="muteBtn" onclick="toggleMute()" class="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2.5 rounded-full backdrop-blur-sm transition-all shadow-lg border border-white/20 z-10" aria-label="Ativar som">
-                            <i data-lucide="volume-x" class="w-5 h-5"></i>
-                        </button>
+                        <form id="heroLeadForm" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-wood-700 mb-1">Seu Nome</label>
+                                <input type="text" id="heroFormNome" required class="w-full px-4 py-3 rounded-lg border border-wood-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all bg-wood-50" placeholder="Ex: João Silva">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-wood-700 mb-1">Qual ambiente quer transformar?</label>
+                                <select id="heroFormAmbiente" required class="w-full px-4 py-3 rounded-lg border border-wood-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all bg-wood-50">
+                                    <option value="" disabled selected>Selecione um ambiente</option>
+                                    <option value="Cozinha">Cozinha</option>
+                                    <option value="Quarto ou Closet">Quarto / Closet</option>
+                                    <option value="Sala de Estar/TV">Sala de Estar / TV</option>
+                                    <option value="Banheiro">Banheiro</option>
+                                    <option value="Casa/Apartamento Todo">Casa / Apartamento Todo</option>
+                                    <option value="Escritório/Comercial">Escritório / Comercial</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-wood-700 mb-1">Serviço de interesse</label>
+                                <select id="heroFormServico" required class="w-full px-4 py-3 rounded-lg border border-wood-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all bg-wood-50">
+                                    <option value="Móveis Planejados e Persianas">Móveis Planejados + Persianas</option>
+                                    <option value="Apenas Móveis Planejados">Apenas Móveis Planejados</option>
+                                    <option value="Apenas Persianas">Apenas Persianas</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-lg mt-2 transition-colors flex justify-center items-center gap-2 shadow-md">
+                                Falar no WhatsApp
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
 
@@ -144,8 +173,8 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-wood-900 mb-4">A solução completa para sua casa</h2>
-                <p class="text-wood-600">Da marcenaria inteligente ao controle de luz perfeito. Tudo em um só lugar.</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-wood-900 mb-4">Transformamos seu ambiente com soluções sob medida</h2>
+                <p class="text-wood-600">Unimos móveis planejados e persianas para deixar seu espaço moderno, funcional e confortável.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -154,32 +183,32 @@
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-accent">
                         <i data-lucide="ruler" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-wood-800 mb-2">100% Sob Medida</h4>
-                    <p class="text-wood-600 leading-relaxed">Móveis e persianas projetados em milímetros para o aproveitamento perfeito do seu espaço.</p>
+                    <h4 class="text-xl font-bold text-wood-800 mb-2">Projeto Personalizado</h4>
+                    <p class="text-wood-600 leading-relaxed">Cada ambiente planejado para sua necessidade.</p>
                 </div>
                 <!-- Bloco 2 -->
                 <div class="bg-wood-50 p-6 rounded-2xl border border-wood-100 hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-accent">
                         <i data-lucide="gem" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-wood-800 mb-2">Acabamento Premium</h4>
-                    <p class="text-wood-600 leading-relaxed">Trabalhamos com os melhores MDFs, ferragens modernas e tecidos de alta durabilidade.</p>
+                    <h4 class="text-xl font-bold text-wood-800 mb-2">Qualidade Superior</h4>
+                    <p class="text-wood-600 leading-relaxed">Materiais selecionados e acabamento impecável.</p>
                 </div>
                 <!-- Bloco 3 -->
                 <div class="bg-wood-50 p-6 rounded-2xl border border-wood-100 hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-accent">
                         <i data-lucide="sun" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-wood-800 mb-2">Conforto Visual</h4>
-                    <p class="text-wood-600 leading-relaxed">Controle a iluminação e garanta a privacidade da sua família com nossas linhas de persianas.</p>
+                    <h4 class="text-xl font-bold text-wood-800 mb-2">Mais Conforto</h4>
+                    <p class="text-wood-600 leading-relaxed">Controle de iluminação e privacidade.</p>
                 </div>
                 <!-- Bloco 4 -->
                 <div class="bg-wood-50 p-6 rounded-2xl border border-wood-100 hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm text-accent">
                         <i data-lucide="calendar-check" class="w-6 h-6"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-wood-800 mb-2">Projeto e Instalação</h4>
-                    <p class="text-wood-600 leading-relaxed">Cuidamos de tudo: do projeto 3D até a montagem final e instalação no seu ambiente.</p>
+                    <h4 class="text-xl font-bold text-wood-800 mb-2">Instalação Completa</h4>
+                    <p class="text-wood-600 leading-relaxed">Entrega e montagem com equipe especializada.</p>
                 </div>
             </div>
         </div>
@@ -312,29 +341,53 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">Como funciona o nosso processo?</h2>
             
-            <div class="grid md:grid-cols-3 gap-8 text-center relative">
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-8 text-center relative">
                 <!-- Linha conectora desktop -->
-                <div class="hidden md:block absolute top-10 left-[15%] right-[15%] h-[2px] bg-wood-300 z-0"></div>
+                <div class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-[2px] bg-wood-300 z-0"></div>
 
                 <!-- Passo 1 -->
-                <div class="relative z-10">
-                    <div class="w-20 h-20 mx-auto bg-accent text-white rounded-full flex items-center justify-center text-3xl font-serif font-bold mb-6 shadow-lg shadow-accent/30">1</div>
-                    <h4 class="text-xl font-bold mb-2">Contato e Ideias</h4>
-                    <p class="text-wood-600">Você nos chama no WhatsApp e conta o que precisa (Móveis, Persianas ou os dois).</p>
+                <div class="relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-accent rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i data-lucide="message-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2 text-wood-900">1. Primeiro contato</h4>
+                    <p class="text-wood-600 text-sm">Você entra em contato conosco pelo WhatsApp e nos conta o que deseja para seu ambiente: móveis planejados, persianas ou o projeto completo.</p>
                 </div>
 
                 <!-- Passo 2 -->
-                <div class="relative z-10">
-                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-wood-900 rounded-full flex items-center justify-center text-3xl font-serif font-bold mb-6">2</div>
-                    <h4 class="text-xl font-bold mb-2">Medição e Projeto</h4>
-                    <p class="text-wood-600">Agendamos uma visita para tirar medidas exatas e, se for o caso, montamos o projeto 3D.</p>
+                <div class="relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-accent rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i data-lucide="ruler" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2 text-wood-900">2. Visita e medições</h4>
+                    <p class="text-wood-600 text-sm">Agendamos uma visita para entender suas necessidades e realizar as medições exatas do espaço.</p>
                 </div>
 
                 <!-- Passo 3 -->
-                <div class="relative z-10">
-                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-wood-900 rounded-full flex items-center justify-center text-3xl font-serif font-bold mb-6">3</div>
-                    <h4 class="text-xl font-bold mb-2">Entrega e Montagem</h4>
-                    <p class="text-wood-600">Nossa equipe realiza a montagem dos móveis e a instalação das persianas com perfeição.</p>
+                <div class="relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-accent rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i data-lucide="pen-tool" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2 text-wood-900">3. Projeto personalizado</h4>
+                    <p class="text-wood-600 text-sm">Desenvolvemos um projeto planejado, pensado para otimizar o espaço e trazer beleza, funcionalidade e sofisticação ao ambiente.</p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-accent rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i data-lucide="wrench" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2 text-wood-900">4. Produção e instalação</h4>
+                    <p class="text-wood-600 text-sm">Após aprovação, iniciamos a produção e nossa equipe realiza a entrega e montagem com todo cuidado e acabamento profissional.</p>
+                </div>
+
+                <!-- Passo 5 -->
+                <div class="relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-white border-4 border-wood-200 text-accent rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                        <i data-lucide="home" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2 text-wood-900">5. Entrega e satisfação</h4>
+                    <p class="text-wood-600 text-sm">Seu ambiente fica pronto para ser desfrutado, com qualidade, garantia e atenção a cada detalhe.</p>
                 </div>
             </div>
         </div>
@@ -384,12 +437,12 @@
                 <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-accent opacity-20 blur-3xl"></div>
                 
                 <div class="relative z-10">
-                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">Pronto para transformar sua casa?</h2>
-                    <p class="text-wood-200 text-lg mb-10 max-w-2xl mx-auto">Seja para móveis planejados sob medida ou para a instalação de persianas modernas, nós temos a melhor solução. Solicite um orçamento sem compromisso.</p>
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-6">Transforme seu ambiente com móveis planejados sob medida</h2>
+                    <p class="text-wood-200 text-lg mb-10 max-w-2xl mx-auto">Fale com nossa equipe e receba um projeto personalizado para sua casa.</p>
                     
                     <button onclick="openModal()" class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full font-bold text-xl shadow-xl shadow-green-500/20 transition-transform transform hover:scale-105">
                         <i data-lucide="smartphone" class="w-7 h-7"></i>
-                        Falar com Especialista
+                        Solicitar orçamento
                     </button>
                 </div>
             </div>
@@ -527,69 +580,54 @@
             }
         });
 
-        // Toggle Mute Hero Video
-        function toggleMute() {
-            const video = document.getElementById('heroVideo');
-            const muteBtn = document.getElementById('muteBtn');
-            
-            if (video) {
-                if (video.muted) {
-                    video.muted = false;
-                    muteBtn.innerHTML = '<i data-lucide="volume-2" class="w-5 h-5"></i>';
-                } else {
-                    video.muted = true;
-                    muteBtn.innerHTML = '<i data-lucide="volume-x" class="w-5 h-5"></i>';
-                }
-                lucide.createIcons();
-            }
-        }
-
-        // Tenta forçar o autoplay no mobile caso o navegador bloqueie
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('heroVideo');
-            if (video) {
-                let playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        // Tenta dar play no primeiro toque do usuário na tela
-                        document.body.addEventListener('touchstart', () => {
-                            video.play();
-                        }, { once: true });
-                    });
-                }
-            }
-        });
-
         // Inicializa os ícones do Lucide
         lucide.createIcons();
 
-        // Lógica de redirecionamento para o WhatsApp
+        // Lógica de redirecionamento para o WhatsApp (Modal)
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Captura os valores digitados/selecionados
             const nome = document.getElementById('formNome').value;
             const ambiente = document.getElementById('formAmbiente').value;
             const servico = document.getElementById('formServico').value;
             
-            // Monta a mensagem formatada (usando * para negrito no WhatsApp)
             const texto = `Olá! Meu nome é *${nome}* e gostaria de solicitar um orçamento.\n\n*Serviço:* ${servico}\n*Ambiente:* ${ambiente}`;
-            
-            // Número do WhatsApp da Línea A
             const numeroWhatsApp = "5542991168173";
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
             
-            // Efeito visual no botão (feedback de que está carregando)
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             
             btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Redirecionando...';
             lucide.createIcons();
             
-            // Aguarda um instante e redireciona abrindo uma nova guia
             setTimeout(() => {
                 window.open(url, '_blank');
-                // Reseta o visual do botão
+                btn.innerHTML = originalText;
+                lucide.createIcons();
+            }, 800);
+        });
+
+        // Lógica de redirecionamento para o WhatsApp (Hero)
+        document.getElementById('heroLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('heroFormNome').value;
+            const ambiente = document.getElementById('heroFormAmbiente').value;
+            const servico = document.getElementById('heroFormServico').value;
+            
+            const texto = `Olá! Meu nome é *${nome}* e gostaria de solicitar um orçamento.\n\n*Serviço:* ${servico}\n*Ambiente:* ${ambiente}`;
+            const numeroWhatsApp = "5542991168173";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Redirecionando...';
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                window.open(url, '_blank');
                 btn.innerHTML = originalText;
                 lucide.createIcons();
             }, 800);
