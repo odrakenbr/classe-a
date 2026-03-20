@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso Indisponível</title>
+    <title>Serviço Suspenso</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
@@ -25,12 +25,12 @@
             position: relative;
         }
 
-        /* Fundo com brilho ambiente laranja mais sutil */
+        /* Fundo com brilho ambiente vermelho escuro */
         .glow {
             position: absolute;
             width: 60vw;
             height: 60vw;
-            background: radial-gradient(circle, rgba(234, 88, 12, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -70,13 +70,13 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: rgba(234, 88, 12, 0.1);
+            background: rgba(220, 38, 38, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            border: 1px solid rgba(234, 88, 12, 0.2);
-            color: #f97316;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            color: #ef4444;
         }
 
         .icon-wrapper svg {
@@ -168,19 +168,19 @@
     
     <div class="container">
         <div class="icon-wrapper">
-            <!-- Ícone de informação padrão neutro -->
+            <!-- Ícone de cadeado fechado -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
         </div>
-        <h1>Acesso Pausado</h1>
-        <p>O funcionamento deste site encontra-se pausado no momento. Por favor, <strong>entre em contato com o desenvolvedor</strong> responsável pelo projeto para realizar a verificação e a liberação do seu acesso.</p>
+        <h1>Acesso Suspenso</h1>
+        <p>O funcionamento deste site foi temporariamente interrompido devido a <strong>pendências administrativas</strong>. Por favor, entre em contato com o desenvolvedor responsável para regularizar o acesso.</p>
         
         <a href="javascript:alert('Envie uma mensagem para o desenvolvedor no canal de comunicação que vocês já utilizam (ex: WhatsApp ou Email).');" class="btn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Falar com o Desenvolvedor
+            Entrar em Contato
         </a>
     </div>
 </body>
