@@ -603,6 +603,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const ambiente = document.getElementById('formAmbiente').value;
             const servico = document.getElementById('formServico').value;
             
+            // 🎯 DISPARO GTM: Evento do formulário Modal
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_whatsapp_enviado',
+                'form_local': 'modal_popup',
+                'servico_escolhido': servico,
+                'ambiente_escolhido': ambiente
+            });
+
             const texto = `Olá! Meu nome é *${nome}* e gostaria de solicitar um orçamento.\n\n*Serviço:* ${servico}\n*Ambiente:* ${ambiente}`;
             const numeroWhatsApp = "5542991168173";
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
@@ -617,6 +626,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 window.open(url, '_blank');
                 btn.innerHTML = originalText;
                 lucide.createIcons();
+                closeModal(); // Opcional: fecha o modal após enviar
             }, 800);
         });
 
@@ -628,6 +638,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const ambiente = document.getElementById('heroFormAmbiente').value;
             const servico = document.getElementById('heroFormServico').value;
             
+            // 🎯 DISPARO GTM: Evento do formulário Hero
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_whatsapp_enviado',
+                'form_local': 'hero_section',
+                'servico_escolhido': servico,
+                'ambiente_escolhido': ambiente
+            });
+
             const texto = `Olá! Meu nome é *${nome}* e gostaria de solicitar um orçamento.\n\n*Serviço:* ${servico}\n*Ambiente:* ${ambiente}`;
             const numeroWhatsApp = "5542991168173";
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
